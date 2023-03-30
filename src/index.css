@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --default-background: #cbcbcb;
+    --default-color: #e63e0b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--default-background);
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    @apply w-full flex flex-col items-center;
+    padding: 12px 25px;
+}
+
+.title {
+    @apply text-5xl text-center font-bold;
+    color: var(--default-color);
+}
+
+.list {
+    @apply flex flex-col items-center;
+}
+
+.add {
+    margin: 25px 0px;
+}
+
+.add button {
+    @apply bg-transparent text-white;
+    background-color: #000;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.items li {
+    padding: 13px 10px 13px 24px;
+    width: 354px;
+    min-height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.items li.checked {
+    background-color: var(--default-color);
+}
+
+.items li div.buttons {
+    display: flex;
+    flex-direction: "row";
+    justify-content: "center";
+    align-items: "center";
+    gap: "16px";
+}
+
+.items .icon {
+    @apply h-6 w-6;
+    cursor: pointer;
+}
+
+.create {
+    @apply flex flex-row items-center justify-center;
+    margin-top: 25px;
+}
+
+.create input {
+    @apply w-full h-10;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.create button {
+    @apply bg-transparent text-white;
+    background-color: #000;
+    cursor: pointer;
+    padding: 7px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
