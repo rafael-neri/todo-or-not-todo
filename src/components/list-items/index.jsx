@@ -8,8 +8,8 @@ export function ListItems() {
         <ul>
             <TasksContext.Consumer>
                 {state => (
-                    state.listTask.map((task, key) => (
-                        <Item key={key} title={task.title} checked={task.checked}>
+                    state.listTask.map((task) => (
+                        <Item key={task.id} title={task.title} checked={task.checked}>
                             <Buttons state={state} id={task.id} />
                         </Item>
                     ))
